@@ -63,7 +63,7 @@ namespace EasyLocalization.Demo.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Key1;Random sentence 1
         ///Key1_1;Random sentence 2
-        ///Key22;Random sentence 3
+        ///Key22;There is one item in the list;There is no items in the list;There are {0} items in the list
         ///Button1_Content;Change Language!
         ///LblTitle_Text;Welcome to EasyLocalization.
         /// </summary>
@@ -80,6 +80,32 @@ namespace EasyLocalization.Demo.Properties {
             get {
                 object obj = ResourceManager.GetObject("JsonFile", resourceCulture);
                 return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+        ///&lt;Entries&gt;
+        ///	&lt;Entry key=&quot;Key1&quot;&gt;
+        ///		&lt;Value&gt;Random sentence 1&lt;/Value&gt;
+        ///	&lt;/Entry&gt;
+        ///	&lt;Entry key=&quot;Key1_1&quot;&gt;
+        ///		&lt;Value&gt;Random sentence 2&lt;/Value&gt;
+        ///	&lt;/Entry&gt;
+        ///	&lt;Entry key=&quot;Key22&quot;&gt;
+        ///		&lt;Value&gt;There is one item in the list&lt;/Value&gt;
+        ///		&lt;ZeroValue&gt;There is no items in the list&lt;/ZeroValue&gt;
+        ///		&lt;PluralValue&gt;There are {0} items in the list&lt;/PluralValue&gt;
+        ///	&lt;/Entry&gt;
+        ///	&lt;Entry key=&quot;Button1_Content&quot;&gt;
+        ///		&lt;Value&gt;Change Language!&lt;/Value&gt;
+        ///	&lt;/Entry&gt;
+        ///	&lt;Entry key=&quot;LblTitle_Text&quot;&gt;
+        ///		&lt;Value&gt;Welcome [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string XmlFile {
+            get {
+                return ResourceManager.GetString("XmlFile", resourceCulture);
             }
         }
     }

@@ -13,7 +13,10 @@ namespace EasyLocalization.Demo
             //var x = new CharSeperatedFileReader("Resources/CharSeperatedFile.txt");
             //x.GetEntries();
 
-            var x = new JsonFileReader("Resources/JsonFile.json");
+            //var x = new JsonFileReader("Resources/JsonFile.json");
+            //x.GetEntries();
+
+            var x = new XmlFileReader("Resources/XmlFile.xml");
             x.GetEntries();
         }
 

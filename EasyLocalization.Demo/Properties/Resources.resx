@@ -124,4 +124,7 @@
   <data name="JsonFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\JsonFile.json;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="XmlFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XmlFile.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
 </root>

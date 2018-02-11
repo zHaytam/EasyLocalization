@@ -68,6 +68,7 @@
     </Compile>
     <Compile Include="Readers\FileReader.cs" />
     <Compile Include="Readers\JsonFileReader.cs" />
+    <Compile Include="Readers\XmlFileReader.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
