@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using System.Globalization;
+using System.Windows;
+using EasyLocalization.Localization;
 using EasyLocalization.Readers;
 
 namespace EasyLocalization.Demo
@@ -10,14 +12,9 @@ namespace EasyLocalization.Demo
         {
             base.OnStartup(e);
 
-            //var x = new CharSeperatedFileReader("Resources/CharSeperatedFile.txt");
-            //x.GetEntries();
-
-            //var x = new JsonFileReader("Resources/JsonFile.json");
-            //x.GetEntries();
-
-            var x = new XmlFileReader("Resources/XmlFile.xml");
-            x.GetEntries();
+            LocalizationManager.Instance.AddCulture(CultureInfo.GetCultureInfo("en-US"), new CharSeperatedFileReader("Resources/en-US.txt"), true);
+            LocalizationManager.Instance.AddCulture(CultureInfo.GetCultureInfo("es-ES"), new XmlFileReader("Resources/es-ES.xml"), false);
+            LocalizationManager.Instance.AddCulture(CultureInfo.GetCultureInfo("fr"), new JsonFileReader("Resources/fr.json"), false);
         }
 
     }

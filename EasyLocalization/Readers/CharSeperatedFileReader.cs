@@ -20,7 +20,7 @@ namespace EasyLocalization.Readers
 
         #region Public Methods
 
-        public override List<LocalizationEntry> GetEntries()
+        internal override List<LocalizationEntry> GetEntries()
         {
             var entries = new List<LocalizationEntry>();
 

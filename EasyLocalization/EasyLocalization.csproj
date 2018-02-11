@@ -51,8 +51,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Localization\LocalizationEntry.cs" />
+    <Compile Include="Localization\LocalizationManager.cs" />
+    <Compile Include="Localization\LocalizeExtension.cs" />
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Readers\CharSeperatedFileReader.cs" />
-    <Compile Include="Readers\FileType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

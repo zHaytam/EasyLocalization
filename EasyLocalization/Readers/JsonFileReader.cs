@@ -13,7 +13,7 @@ namespace EasyLocalization.Readers
 
         #region Public Methods
 
-        public override List<LocalizationEntry> GetEntries()
+        internal override List<LocalizationEntry> GetEntries()
         {
             var dict = JsonConvert.DeserializeObject<Dictionary<string, JObject>>(File.ReadAllText(Path));
             var entries = new List<LocalizationEntry>();

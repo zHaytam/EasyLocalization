@@ -1,0 +1,19 @@
+{
+  "Key1": {
+    "Value": "Phrase aléatoire 1"
+  },
+  "Key1_1": {
+    "Value": "Phrase aléatoire 2"
+  },
+  "Key22": {
+    "Value": "Il y a un élément dans la liste",
+    "ZeroValue": "Il n'y a aucun élément dans la liste",
+    "PluralValue": "Il y a {0} éléments dans la liste"
+  },
+  "Button1_Content": {
+    "Value": "Changer de langue!"
+  },
+  "LblTitle_Text": {
+    "Value": "Bienvenue sur EasyLocalization"
+  }
+}

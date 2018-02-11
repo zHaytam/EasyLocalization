@@ -67,45 +67,45 @@ namespace EasyLocalization.Demo.Properties {
         ///Button1_Content;Change Language!
         ///LblTitle_Text;Welcome to EasyLocalization.
         /// </summary>
-        internal static string CharSeperatedFile {
+        internal static string en_US {
             get {
-                return ResourceManager.GetString("CharSeperatedFile", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] JsonFile {
-            get {
-                object obj = ResourceManager.GetObject("JsonFile", resourceCulture);
-                return ((byte[])(obj));
+                return ResourceManager.GetString("en-US", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
         ///&lt;Entries&gt;
-        ///	&lt;Entry key=&quot;Key1&quot;&gt;
-        ///		&lt;Value&gt;Random sentence 1&lt;/Value&gt;
-        ///	&lt;/Entry&gt;
-        ///	&lt;Entry key=&quot;Key1_1&quot;&gt;
-        ///		&lt;Value&gt;Random sentence 2&lt;/Value&gt;
-        ///	&lt;/Entry&gt;
-        ///	&lt;Entry key=&quot;Key22&quot;&gt;
-        ///		&lt;Value&gt;There is one item in the list&lt;/Value&gt;
-        ///		&lt;ZeroValue&gt;There is no items in the list&lt;/ZeroValue&gt;
-        ///		&lt;PluralValue&gt;There are {0} items in the list&lt;/PluralValue&gt;
-        ///	&lt;/Entry&gt;
-        ///	&lt;Entry key=&quot;Button1_Content&quot;&gt;
-        ///		&lt;Value&gt;Change Language!&lt;/Value&gt;
-        ///	&lt;/Entry&gt;
-        ///	&lt;Entry key=&quot;LblTitle_Text&quot;&gt;
-        ///		&lt;Value&gt;Welcome [rest of string was truncated]&quot;;.
+        ///  &lt;Entry key=&quot;Key1&quot;&gt;
+        ///    &lt;Value&gt;OraciÃ³n aleatoria 1&lt;/Value&gt;
+        ///  &lt;/Entry&gt;
+        ///  &lt;Entry key=&quot;Key1_1&quot;&gt;
+        ///    OraciÃ³n aleatoria 2
+        ///  &lt;/Entry&gt;
+        ///  &lt;Entry key=&quot;Key22&quot;&gt;
+        ///    &lt;Value&gt;Hay un elemento en la lista&lt;/Value&gt;
+        ///    &lt;ZeroValue&gt;No hay elementos en la lista&lt;/ZeroValue&gt;
+        ///    &lt;PluralValue&gt;Hay {0} elementos en la lista&lt;/PluralValue&gt;
+        ///  &lt;/Entry&gt;
+        ///  &lt;Entry key=&quot;Button1_Content&quot;&gt;
+        ///    &lt;Value&gt;Â¡Cambiar idioma!&lt;/Value&gt;
+        ///  &lt;/Entry&gt;
+        ///  &lt;Entry key=&quot;LblTitle_Text&quot;&gt;
+        ///    &lt;Val [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string XmlFile {
+        internal static string es_ES {
             get {
-                return ResourceManager.GetString("XmlFile", resourceCulture);
+                return ResourceManager.GetString("es-ES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] fr {
+            get {
+                object obj = ResourceManager.GetObject("fr", resourceCulture);
+                return ((byte[])(obj));
             }
         }
     }

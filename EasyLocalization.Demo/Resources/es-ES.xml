@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entries>
+  <Entry key="Key1">
+    <Value>Oración aleatoria 1</Value>
+  </Entry>
+  <Entry key="Key1_1">
+    Oración aleatoria 2
+  </Entry>
+  <Entry key="Key22">
+    <Value>Hay un elemento en la lista</Value>
+    <ZeroValue>No hay elementos en la lista</ZeroValue>
+    <PluralValue>Hay {0} elementos en la lista</PluralValue>
+  </Entry>
+  <Entry key="Button1_Content">
+    <Value>¡Cambiar idioma!</Value>
+  </Entry>
+  <Entry key="LblTitle_Text">
+    <Value>Bienvenido a EasyLocalization</Value>
+  </Entry>
+</Entries>
