@@ -23,7 +23,7 @@ namespace EasyLocalization.Readers
 
         #region Abstract Methods
 
-        internal abstract List<LocalizationEntry> GetEntries();
+        internal abstract Dictionary<string, LocalizationEntry> GetEntries();
 
         #endregion
 

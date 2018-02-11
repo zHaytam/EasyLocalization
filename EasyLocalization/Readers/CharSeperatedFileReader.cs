@@ -20,9 +20,9 @@ namespace EasyLocalization.Readers
 
         #region Public Methods
 
-        internal override List<LocalizationEntry> GetEntries()
+        internal override Dictionary<string, LocalizationEntry> GetEntries()
         {
-            var entries = new List<LocalizationEntry>();
+            var entries = new Dictionary<string, LocalizationEntry>();
 
             using (StreamReader sr = File.OpenText(Path))
             {
@@ -38,13 +38,13 @@ namespace EasyLocalization.Readers
                     switch (splitted.Length)
                     {
                         default:
-                            entries.Add(new LocalizationEntry(splitted[0], splitted[1]));
+                            entries.Add(splitted[0], new LocalizationEntry(splitted[1]));
                             break;
                         case 3:
-                            entries.Add(new LocalizationEntry(splitted[0], splitted[1], splitted[2]));
+                            entries.Add(splitted[0], new LocalizationEntry(splitted[1], splitted[2]));
                             break;
                         case 4:
-                            entries.Add(new LocalizationEntry(splitted[0], splitted[1], splitted[2], splitted[3]));
+                            entries.Add(splitted[0], new LocalizationEntry(splitted[1], splitted[2], splitted[3]));
                             break;
                     }
                 }

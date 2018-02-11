@@ -12,9 +12,9 @@ namespace EasyLocalization.Readers
 
         #region Public Methods
 
-        internal override List<LocalizationEntry> GetEntries()
+        internal override Dictionary<string, LocalizationEntry> GetEntries()
         {
-            var entries = new List<LocalizationEntry>();
+            var entries = new Dictionary<string, LocalizationEntry>();
             var doc = new XmlDocument();
             doc.Load(Path);
 
@@ -34,13 +34,13 @@ namespace EasyLocalization.Readers
                 if (valueNode == null)
                 {
                     // If theere is no Value node, we'll take the InnerText instead
-                    entries.Add(new LocalizationEntry(key, entry.InnerText.Trim()));
+                    entries.Add(key, new LocalizationEntry(entry.InnerText.Trim()));
                 }
                 else
                 {
                     var zeroValueNode = entry.SelectSingleNode("ZeroValue");
                     var pluralValueNode = entry.SelectSingleNode("PluralValue");
-                    entries.Add(new LocalizationEntry(key, valueNode.InnerText, zeroValueNode?.InnerText, pluralValueNode?.InnerText));
+                    entries.Add(key, new LocalizationEntry(valueNode.InnerText, zeroValueNode?.InnerText, pluralValueNode?.InnerText));
                 }
 
             }

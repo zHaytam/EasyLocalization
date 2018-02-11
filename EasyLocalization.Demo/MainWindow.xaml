@@ -4,9 +4,26 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EasyLocalization.Demo"
+        xmlns:localization="clr-namespace:EasyLocalization.Localization;assembly=EasyLocalization"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+
+    <StackPanel>
+        <TextBlock Margin="4"
+                   Text="{localization:Localize Key1}" />
+        <TextBlock Margin="4"
+                   Text="{localization:Localize Key1_1}" />
+        <TextBlock Margin="4"
+                   Text="{localization:Localize KeySource={Binding Key}, 
+                                                CountSource={Binding Value}}" />
+        <TextBlock Margin="4"
+                   Name="LblTitle"
+                   Text="{localization:Localize}" />
+        <Button Margin="4"
+                Name="Button1"
+                Content="{localization:Localize}" />
+        <xctk:IntegerUpDown Margin="4" Value="{Binding Value}" />
+    </StackPanel>
+    
 </Window>

@@ -2,7 +2,6 @@
 using System.IO;
 using EasyLocalization.Localization;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace EasyLocalization.Readers
 {
@@ -13,19 +12,9 @@ namespace EasyLocalization.Readers
 
         #region Public Methods
 
-        internal override List<LocalizationEntry> GetEntries()
+        internal override Dictionary<string, LocalizationEntry> GetEntries()
         {
-            var dict = JsonConvert.DeserializeObject<Dictionary<string, JObject>>(File.ReadAllText(Path));
-            var entries = new List<LocalizationEntry>();
-
-            foreach (var kvp in dict)
-            {
-                var entry = kvp.Value.ToObject<LocalizationEntry>();
-                entry.Key = kvp.Key;
-                entries.Add(entry);
-            }
-
-            return entries;
+            return JsonConvert.DeserializeObject<Dictionary<string, LocalizationEntry>>(File.ReadAllText(Path));
         }
 
         #endregion

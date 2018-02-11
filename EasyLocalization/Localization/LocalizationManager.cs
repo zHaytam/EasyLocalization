@@ -32,7 +32,7 @@ namespace EasyLocalization.Localization
 
         #region Fields
 
-        private readonly Dictionary<CultureInfo, List<LocalizationEntry>> _languageEntries = new Dictionary<CultureInfo, List<LocalizationEntry>>();
+        private readonly Dictionary<CultureInfo, Dictionary<string, LocalizationEntry>> _languageEntries = new Dictionary<CultureInfo, Dictionary<string, LocalizationEntry>>();
         private CultureInfo _currentCulture;
 
         #endregion
@@ -44,7 +44,7 @@ namespace EasyLocalization.Localization
             get => _currentCulture;
             set
             {
-                if (_currentCulture.Equals(value))
+                if (_currentCulture?.Equals(value) == true)
                     return;
 
                 _currentCulture = value;
@@ -56,11 +56,11 @@ namespace EasyLocalization.Localization
 
         #region Public Methods
 
-        public void AddCulture(CultureInfo culture, FileReader reader, bool choose)
+        public void AddCulture(CultureInfo culture, FileReader reader, bool choose = false)
         {
             if (_languageEntries.ContainsKey(culture))
             {
-                // If the culture is already registered, re-set its value
+                // If the culture is already registered, re-set its values
                 _languageEntries[culture] = reader.GetEntries();
             }
             else
@@ -74,7 +74,32 @@ namespace EasyLocalization.Localization
             }
         }
 
-        
+        public string GetValue(string key, bool nullWhenUnfound = true)
+        {
+            if (_languageEntries == null || CurrentCulture == null)
+                return key;
+
+            var entries = _languageEntries[CurrentCulture];
+
+            if (key == null || !entries.ContainsKey(key))
+                return nullWhenUnfound ? null : key;
+
+            return entries[key].Value;
+        }
+
+        public string GetValue(string key, int count, bool nullWhenUnfound = true)
+        {
+            if (_languageEntries == null || CurrentCulture == null)
+                return key;
+
+            var entries = _languageEntries[CurrentCulture];
+
+            if (key == null || !entries.ContainsKey(key))
+                return nullWhenUnfound ? null : key;
+
+            var entry = entries[key];
+            return count == 0 ? entry.ZeroValue : string.Format(entry.PluralValue, count);
+        }
 
         #endregion
 
