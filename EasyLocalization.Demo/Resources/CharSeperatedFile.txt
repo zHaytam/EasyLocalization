@@ -1,0 +1,5 @@
+Key1;Random sentence 1
+Key1_1;Random sentence 2
+Key22;Random sentence 3
+Button1_Content;Change Language!
+LblTitle_Text;Welcome to EasyLocalization
