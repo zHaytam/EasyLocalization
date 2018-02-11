@@ -10,7 +10,10 @@ namespace EasyLocalization.Demo
         {
             base.OnStartup(e);
 
-            var x = new CharSeperatedFileReader("Resources/CharSeperatedFile.txt");
+            //var x = new CharSeperatedFileReader("Resources/CharSeperatedFile.txt");
+            //x.GetEntries();
+
+            var x = new JsonFileReader("Resources/JsonFile.json");
             x.GetEntries();
         }
 

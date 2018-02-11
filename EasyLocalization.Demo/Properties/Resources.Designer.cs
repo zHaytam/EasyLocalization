@@ -61,11 +61,25 @@ namespace EasyLocalization.Demo.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Key1;Random sentence 1
+        ///Key1_1;Random sentence 2
+        ///Key22;Random sentence 3
+        ///Button1_Content;Change Language!
+        ///LblTitle_Text;Welcome to EasyLocalization.
         /// </summary>
         internal static string CharSeperatedFile {
             get {
                 return ResourceManager.GetString("CharSeperatedFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] JsonFile {
+            get {
+                object obj = ResourceManager.GetObject("JsonFile", resourceCulture);
+                return ((byte[])(obj));
             }
         }
     }

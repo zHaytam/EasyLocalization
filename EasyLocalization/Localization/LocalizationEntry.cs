@@ -5,7 +5,7 @@
 
         #region Properties
 
-        public string Key { get; }
+        public string Key { get; internal set; }
         
         public string Value { get; }
 

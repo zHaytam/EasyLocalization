@@ -1,5 +1,5 @@
 Key1;Random sentence 1
 Key1_1;Random sentence 2
-Key22;Random sentence 3
+Key22;There is one item in the list;There is no items in the list;There are {0} items in the list
 Button1_Content;Change Language!
 LblTitle_Text;Welcome to EasyLocalization
