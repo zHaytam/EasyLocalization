@@ -10,8 +10,7 @@
         Title="MainWindow" Height="192.178" Width="304.371">
 
     <StackPanel>
-        <TextBlock Margin="4"
-                   Text="{localization:Localize Key1}" />
+        <TextBlock Margin="4" Text="{localization:Localize Key1}" />
         <TextBlock Margin="4"
                    Text="{localization:Localize Key1_1}" />
         <TextBlock Margin="4"

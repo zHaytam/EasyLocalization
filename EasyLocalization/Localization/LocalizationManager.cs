@@ -104,7 +104,7 @@ namespace EasyLocalization.Localization
                 return nullWhenUnfound ? null : key;
 
             var entry = entries[key];
-            return count == 0 ? entry.ZeroValue : string.Format(entry.PluralValue, count);
+            return count == 0 ? entry.ZeroValue : count == 1 ? entry.Value : string.Format(entry.PluralValue, count);
         }
 
         #endregion

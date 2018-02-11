@@ -12,9 +12,16 @@ namespace EasyLocalization.Demo
         {
             base.OnStartup(e);
 
-            LocalizationManager.Instance.AddCulture(CultureInfo.GetCultureInfo("en-US"), new CharSeperatedFileReader("Resources/en-US.txt"), true);
-            LocalizationManager.Instance.AddCulture(CultureInfo.GetCultureInfo("es-ES"), new XmlFileReader("Resources/es-ES.xml"));
-            LocalizationManager.Instance.AddCulture(CultureInfo.GetCultureInfo("fr"), new JsonFileReader("Resources/fr.json"));
+            LocalizationManager.Instance.AddCulture(
+                CultureInfo.GetCultureInfo("en-US"),
+                new CharSeperatedFileReader("Resources/en-US.txt"),
+                true);
+            LocalizationManager.Instance.AddCulture(
+                CultureInfo.GetCultureInfo("es-ES"),
+                new XmlFileReader("Resources/es-ES.xml"));
+            LocalizationManager.Instance.AddCulture(
+                CultureInfo.GetCultureInfo("fr"),
+                new JsonFileReader("Resources/fr.json"));
         }
 
     }
