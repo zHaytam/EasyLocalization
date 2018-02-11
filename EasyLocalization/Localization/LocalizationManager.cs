@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
+using System.Linq;
 using System.Runtime.CompilerServices;
 using EasyLocalization.Annotations;
 using EasyLocalization.Readers;
@@ -47,10 +48,15 @@ namespace EasyLocalization.Localization
                 if (_currentCulture?.Equals(value) == true)
                     return;
 
+                if (!_languageEntries.ContainsKey(value))
+                    return;
+
                 _currentCulture = value;
                 OnPropertyChanged();
             }
         }
+
+        public List<CultureInfo> AvailableCultures => _languageEntries.Keys.ToList();
 
         #endregion
 

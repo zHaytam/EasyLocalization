@@ -1,14 +1,14 @@
-{
+ï»¿{
   "Key1": {
-    "Value": "Phrase aléatoire 1"
+    "Value": "Phrase alÃ©atoire 1"
   },
   "Key1_1": {
-    "Value": "Phrase aléatoire 2"
+    "Value": "Phrase alÃ©atoire 2"
   },
   "Key22": {
-    "Value": "Il y a un élément dans la liste",
-    "ZeroValue": "Il n'y a aucun élément dans la liste",
-    "PluralValue": "Il y a {0} éléments dans la liste"
+    "Value": "Il y a un Ã©lÃ©ment dans la liste",
+    "ZeroValue": "Il n'y a aucun Ã©lÃ©ment dans la liste",
+    "PluralValue": "Il y a {0} Ã©lÃ©ments dans la liste"
   },
   "Button1_Content": {
     "Value": "Changer de langue!"

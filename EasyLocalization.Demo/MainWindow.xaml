@@ -20,10 +20,10 @@
         <TextBlock Margin="4"
                    Name="LblTitle"
                    Text="{localization:Localize}" />
+        <xctk:IntegerUpDown Margin="4" Value="{Binding Value}" />
         <Button Margin="4"
                 Name="Button1"
-                Content="{localization:Localize}" />
-        <xctk:IntegerUpDown Margin="4" Value="{Binding Value}" />
+                Content="{localization:Localize}" Click="Button1_Click" />
     </StackPanel>
     
 </Window>
