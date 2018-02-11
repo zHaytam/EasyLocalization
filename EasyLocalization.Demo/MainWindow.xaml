@@ -7,7 +7,7 @@
         xmlns:localization="clr-namespace:EasyLocalization.Localization;assembly=EasyLocalization"
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="192.178" Width="304.371">
 
     <StackPanel>
         <TextBlock Margin="4"
@@ -25,5 +25,5 @@
                 Name="Button1"
                 Content="{localization:Localize}" Click="Button1_Click" />
     </StackPanel>
-    
+
 </Window>
